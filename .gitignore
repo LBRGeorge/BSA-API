@@ -1,0 +1,6 @@
+node_modules
+storage/mongo
+storage/log/access.log
+storage/log/error.log
+.env
+package-lock.json

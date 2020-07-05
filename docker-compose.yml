@@ -1,0 +1,22 @@
+version: '3.3'
+
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy
+
+services:
+  bsa-mongodb:
+    image: mongo:4.2.8
+    container_name: "bsa-mongodb"
+    command: mongod --quiet --auth
+    volumes:
+      - ./storage/mongo/db:/data/db
+      - ./storage/mongo/log:/data/log
+    ports:
+        - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_DATABASE_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_DATABASE_PASS}
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/data/log
