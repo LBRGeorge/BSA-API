@@ -48,7 +48,7 @@ module.exports = {
    * HTTP Server config
    */
   http: {
-    port: HTTP_SERVER_PORT,
+    port: process.env.PORT || HTTP_SERVER_PORT,
     logging: {
       access: HTTP_ACCESS_LOG_FILE && HTTP_ACCESS_LOG_FILE.length > 0 ? HTTP_ACCESS_LOG_FILE : ACCESS_LOG,
       error: HTTP_ERROR_LOG_FILE && HTTP_ERROR_LOG_FILE.length > 0 ? HTTP_ERROR_LOG_FILE : ERROR_LOG
