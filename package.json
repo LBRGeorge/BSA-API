@@ -25,10 +25,10 @@
     "morgan": "^1.10.0",
     "node-rsa": "^1.0.8",
     "sha256": "^0.2.0",
-    "uuid-token-generator": "^1.0.0"
+    "uuid-token-generator": "^1.0.0",
+    "link-module-alias": "^1.2.0"
   },
   "devDependencies": {
-    "link-module-alias": "^1.2.0",
     "nodemon": "^2.0.4"
   },
   "_moduleAliases": {
